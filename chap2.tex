@@ -284,7 +284,45 @@ Il devient souvent préférable de se procurer illégalement une copie du jeu d�
 Il faut également noter que les DRM ne sont pas nécessairement une application technique de la loi, dans le sens où ils peuvent tout à faire empêcher de réaliser une action qui est légale.
 De plus, les DRM fonctionnent sur le principe de la présomption de culpabilité, ce qui fait que les œuvres qu'ils <<~protègent~>> deviennent des coquilles vides si jamais une partie du système d'authentification disparait (par exemple, les serveurs d'activation du jeu sont démantelés suite à la faillite de l'éditeur).
 
+Pour résumer, les DRM sont plutôt des mécanismes qui empêchent l'exploitation d'une œuvre après qu'elle ait été copiée ; il ne s'agit pas d'empêcher la copie mais de la rendre inefficace.
 
+Je vais maintenant parler d'une autre technique de contrôle de la copie : le DPI.
+DPI signifie <<~Deep Packet Inspection~>>, soit <<~Inspection des Paquets en Profondeur~>> en français.
+
+Le DPI est, pour un équipement réseau, l'activité d'analyser de manière poussée tous les paquets réseau qui le traversent.
+Chaque paquet est donc, ouvert, analysé et étiqueté selon le résultat de l'analyse.
+Par exemple, un paquet peut être issus d'un logiciel de chat vocal, ou alors avoir été émis par un navigateur web cherchant à charger la page d'accueil d'un site de vente de légumes.
+
+Ensuite, des action seront (ou pas) réalisées sur les paquets en fonction de leur(s) étiquette(s).
+Par exemple :
+
+\begin{itemize}
+\item le bloquer ;
+\item le ralentir ;
+\item notifier l'administrateur du système en lui fournissant des détails précis sur le(s) paquet(s) en question ;
+\item mettre à jour une base de données de statistiques ;
+\item bloquer tous les paquets en provenance et à destination de l'émetteur du paquet en question\dots{}
+\end{itemize}
+
+Dans le cas où aucune action directe n'est effectuée à l'encontre des paquets (blocage, ralentissement, etc.), l'utilisateur ne peut pas savoir que son trafic réseau est ouvert et analysé.
+
+Il est théoriquement possible, avec une bonne base de données de filtre de détection, de détecter en temps réel si une œuvre est en train de circuler sur le réseau, et de bloquer son transfert.
+Cette utilisation n'est pas encore très répandue, mais plusieurs entreprises sont en train de la développer.
+
+Le DPI va à l'encontre du principe de la neutralité du réseau, qui garantit l'égalité de traitement de tous les flux de données sur Internet.
+Ce principe exclut ainsi toute discrimination à l'égard de la source, de la destination ou du contenu de l'information transmise sur le réseau.
+Il faut noter que dans certains cas, le DPI peut avoir une pertinence technique.
+Par exemple, lorsque beaucoup d'utilisateurs se partagent une seule et même connexion Internet, aux débits sous-dimensionnés, transmettre en priorité les paquets ayant besoin d'une faible latence (comme la voix, Skype) peut permettre d'améliorer grandement la qualité de service, pour une perte non ressentie sur les autres types de paquets.
+
+Le DPI est un outil, il est donc neutre.
+Tout comme les caméras de surveillance, il peut être utilisé autant pour le bien (la sécurité des personnes) que pour le mal (espionnage).
+Mais, aux contraire de celles-ci, il est capable d'espionner beaucoup plus de gens et d'une manière beaucoup plus fine.
+
+On peut alors parler d'espionnage de masse.
+L'exemple le plus connu est celui du <<~Grand Firewall de Chine~>>, qui censure et espionne l'ensemble du trafic Internet chinois depuis bientôt une dizaine d'années.
+
+Malheureusement, le DPI est en train de se démocratiser de plus en plus, même dans nos pays.
+Un tel système a été inauguré dans mon école il y a quelques mois.
 
 %(DRM, HADOPI, DPI, cloud, vie privée, annexe vélo)
 \section{Partager favorise le progrès}
