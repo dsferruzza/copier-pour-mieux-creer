@@ -227,7 +227,63 @@ Et surtout, il faut limiter le nombre de victimes des puissants qui s'y opposero
 
 %(exemples de "crises" similaires et résolues, exemple des bibliothèques)
 \section{Interdire implique contrôler} % ou L'interdiction implique le contrôle
-(DRM, HADOPI, DPI, cloud, vie privée, annexe vélo)
+
+Depuis le début de ce chapitre, je parle de dispositifs d'interdiction ou de contrôle de la copie.
+Je n'ai abordé jusque là que le côté législatif, mais qu'en est-il de la régulation de la copie des œuvres, du point de vue pratique ?
+
+Des procédés permettant de rendre la copie d'une œuvre impossible, ou tout du moins difficile ou contraignante, ont été inventés au fil des ères.
+Je ne reviendrais pas sur tout, et me concentrerai sur les principes qui sont encore d'actualité ; principalement dans le domaine du numérique, donc.
+
+Avant de continuer, rappelons quelques fondamentaux.
+Par définition, une donnée numérique est un ensemble fini de bits, c'est à dire de nombres en base 2 (des 0 ou des 1) placés dans un ordre précis.
+Pour donner un sens à cette suite de nombres binaires, on va définir un format de données.
+Il s'agit une convention (parfois normalisée) qui explique comment exploiter la donnée numérique, c'est à dire comment retransformer la suite de bits en l'information qu'elle décrit.
+Les formats de données permettent l'interopérabilité : les données peuvent être échangées entre différents logiciels.
+Certains formats de données sont ouverts, c'est à dire que leur spécification est publiquement accessible, alors que d'autres sont fermés.
+
+Le premier mécanisme qui vise à contrôler les copies de données numériques que nous allons voir est un ensemble de solutions rassemblées sous l'appellation <<~Mesures Techniques de Protection~>> (MTP), ou <<~Digital Rights Management~>> (DRM) en anglais.
+
+Ces dispositifs ont pour objectif de contrôler l'utilisation qui est faite des œuvres numériques.
+Ils peuvent s'appliquer à tous types de supports numériques physiques (disques, DVD, Blu-ray, logiciels, etc.) ou de transmission (télédiffusion, services Internet, etc.).
+
+Le principe de fonctionnement est le suivant :
+
+\begin{enumerate}
+\item Les données numériques qui constituent l'œuvre sont chiffrées, c'est à dire qu'elles sont illisibles pour quiconque ne possède pas la clé de déchiffrement.
+\item Lorsqu'on souhaite accéder à l'œuvre, le DRM va vérifier qu'on rempli un certain nombre de conditions définies par l'éditeur ou le distributeur de l'œuvre (une preuve d'achat est présente, par exemple).
+\item Si les conditions sont remplies, il devient possible de déchiffrer les données.
+\end{enumerate}
+
+Bien souvent, les données protégées utilisent un format propriétaire, ce qui rend très difficile leur exploitation avec d'autres logiciels que ceux fournis par l'éditeur ou le distributeur.
+Ces logiciels sont donc les seuls capables de restituer l'œuvre, et ils embarquent les mécanismes de contrôle que je viens de décrire.
+
+Voici quelques exemples de DRM :
+
+\begin{itemize}
+\item  Le zonage régional sur les DVDs empêche de regarder des films achetés dans une autre zone que celle d'où provient le lecteur.
+\item Certains logiciels nécessitent la saisie d'une clé d'activation pour fonctionner.
+Ces clés sont générées grâce à procédé secret, connu par le logiciel, lui permettant de déterminer si une clé est valide ou pas et si elle a déjà été utilisée.
+L'éditeur n'a plus qu'à vendre une clé par client.
+\item Certains jeux vidéo embarquent un mécanisme qui oblige le joueur à être connecté à Internet en permanence durant sa session de jeu (indépendamment du fait que le jeu ait besoin d'Internet dans son fonctionnement normal ou pas) de manière à vérifier en permanence la validité de son exemplaire du jeu.
+Dans le cas d'un exemplaire qui n'a pas été acheté directement à l'éditeur, le contenu est bloqué\footnote{On a déjà entendu parler de certains jeux qui allaient jusqu'à supprimer les sauvegardes du joueur lorsqu'il détectent que le jeu n'a pas été acheté}.
+\end{itemize}
+
+Les exemples sont très nombreux.
+Mais dans tous les cas, il faut retenir que le DRM empêche l'interopérabilité, puisque seuls certains logiciels (bien souvent un seul) qui embarquent les mécanismes de vérification d'authenticité peuvent exploiter l'œuvre.
+Cela pose de gros problèmes dans certains cas.
+Par exemple, les aveugles et malvoyants qui voudraient convertir un livre numérique en format audio ne pourront pas le faire car le logiciel de l'éditeur ne le permet pas et empêche toute conversion/copie de l'œuvre.
+
+Heureusement, il existe à travers le monde des défenseurs de la liberté qui vont rechercher des solutions pour briser ces verrous techniques.
+Ces pratiques sont la plupart du temps illégales, mais sont souvent plus motivées par l'envie d'avoir une œuvre exploitable simplement que par celle de ne pas avoir à la payer.
+
+Reprenons l'exemple des jeux vidéos qui nécessitent une activation perpétuelle via Internet pour fonctionner.
+Ce principe est très contraignant, car on pourrait vouloir jouer alors qu'on n'a pas Internet (vacances, coupure, etc.).
+Finalement, le DRM en lui-même est une raison suffisante pour le contourner, tellement il est agaçant.
+Il devient souvent préférable de se procurer illégalement une copie du jeu déplombée du DRM, et ce même si on l'a acheté légalement par ailleurs.
+
+Il faut également noter que les DRM ne sont pas nécessairement une application technique de la loi, dans le sens où ils peuvent tout à faire empêcher de réaliser une action qui est légale.
+De plus, les DRM fonctionnent sur le principe de la présomption de culpabilité, ce qui fait que les œuvres qu'ils <<~protègent~>> deviennent des coquilles vides si jamais une partie du système d'authentification disparait (par exemple, les serveurs d'activation du jeu sont démantelés suite à la faillite de l'éditeur).
+%(DRM, HADOPI, DPI, cloud, vie privée, annexe vélo)
 \section{Partager favorise le progrès}
 % sanctionner copie = sanctionner inspiration (cf chap 1)
 (les pirates achètent, exemple de Arduino, exemple de la mode)
