@@ -23,9 +23,26 @@
 \newcommand\encadre[1]{\vspace{1.5ex}\fbox{\begin{minipage}{0.92\textwidth}\begin{center}#1\end{center}\end{minipage}}\vspace{2.5ex}}
 
 \newcommand{\titre}{Copier pour mieux créer} % Copier pour mieux coller / Copier, c'est le progrès / Copier pour mieux créer
-\author{David Sferruzza}
+\newcommand{\moi}{David Sferruzza}
+\author{\moi}
 \title{\textit{\titre}}
 \date{décembre 2012}
+
+% Entête et pied de page
+\fancyhf{}
+\lhead{\leftmark}
+\lfoot{\moi}
+\rfoot{\thepage/\pageref*{LastPage}}
+\renewcommand{\footrulewidth}{0.1pt}
+\pagestyle{fancy}
+
+% Entête et pied de page pour les 1ères pages des chapitres
+\fancypagestyle{plain}{
+	\lhead{}
+	\chead{}
+	\rhead{}
+	\renewcommand{\headrulewidth}{0pt}
+}
 
 \begin{document}
 
