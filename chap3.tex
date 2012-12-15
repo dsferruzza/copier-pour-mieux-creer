@@ -5,11 +5,111 @@ Je pense que nous pouvons éviter cette situation, et je vais donner des pistes 
 
 \section{Ne pas devenir esclave du progrès}
 
+Comme je l'ai montré dans la partie \ref*{drm} (page \pageref{drm}), les moyens de contrôle de la copie se sont démocratisés, et avec eux la fonte de certaines de nos libertés fondamentales, ainsi que de notre vie privée.
+Mais il n'est pas trop tard pour réagir\dots{}
+Avant de poursuivre cette réflexion, je vais devoir expliquer un certain nombre de notions.
 
+On commence par la licence d'une œuvre.
+Pour faire simple, lorsqu'un créateur produit une œuvre, il peut définir une licence (ou <<~contrat de licence~>>).
+Il s'agit un contrat qui explique les conditions d'utilisation de l'œuvre, auquel chaque utilisateur doit se plier.
+
+Pour un logiciel, on peut par exemple avoir une licence de type commercial, qui interdit complètement l'utilisation du logiciel sans avoir payé une redevance, ou alors une licence dite <<~freeware~>> qui permet l'utilisation de ce dernier de manière gratuite.
+
+La particularité d'un logiciel est que, dans la plupart des cas, on peut distinguer deux états :
+
+\begin{itemize}
+\item le code source : c'est ce que le développeur va écrire dans un langage de programmation donnée ; il s'agit un ensemble de fichiers textes ;
+\item l'exécutable : il s'agit d'une traduction du code source en langage machine, obtenue par l'action dite de <<~compilation~>> ; l'exécutable est incompréhensible par un humain et on ne peut pas l'utiliser pour récupérer le code source !
+\end{itemize}
+
+Pour faire une analogie, disons que le code source est une recette de gâteau ainsi que ses ingrédients, et que l'exécutable est un gâteau.
+Avec un pâtissier, il est possible d'obtenir un gâteau à partir de sa recette et de ses ingrédients.
+Par contre, il ne sera pas possible de récupérer ni la recette ni les ingrédients à partir du gâteau !
+On pourra éventuellement réussi à récupérer quelques ingrédients qui n'auraient pas été mélangés (comme les petites fraises qui sont sur le glaçage) et un bon pâtissier pourra peut être réécrire une partie de la recette ; mais il n'est pas possible de récupérer tous les ingrédients et la recette exacte !
+
+Certains créateurs distribuent le code source de leur logiciel, on dit alors que le logiciel est <<~libre~>> ou <<~open source~>>.
+D'autres ne le font pas, et distribuent uniquement l'exécutable.
+Leur logiciel est alors dit <<~propriétaire~>> ou <<~privateur~>>.
+
+La notion de logiciel libre a été formalisée en 1983 par Richard Stallman, créateur de la Free Software Foundation\footnote{\url{https://www.fsf.org}}.
+La définition d'un logiciel libre est basée sur quatre libertés :
+
+\begin{enumerate}
+\item[0.] la liberté d'exécuter le programme, pour tous les usages ;
+\item la liberté d'étudier le fonctionnement du programme et de l'adapter à ses besoins ;
+\item la liberté de redistribuer des copies du programme (ce qui implique la possibilité aussi bien de donner que de vendre des copies) ;
+\item la liberté d'améliorer le programme et de distribuer ces améliorations au public, pour en faire profiter toute la communauté.
+\end{enumerate}
+
+Certains logiciels propriétaires peuvent donner les libertés \no{}0 et \no{}2 à l'utilisateur, mais les deux autres libertés leur sont inaccessibles puisqu'ils ne distribuent pas leur code source.
+
+Au delà de l'aspect légal, le logiciel libre est une philosophie.
+Il s'agit de rendre le contrôle à l'utilisateur : il a les moyens d'étudier le programme qui va s'exécuter sur son matériel, et de le modifier s'il ne lui plait pas.
+Cette possibilité pour n'importe qui de pouvoir étudier le fonctionnement d'un logiciel peut paraitre inutile pour le commun des mortels qui ne connaissent pas la programmation, c'est pourtant quelque chose de très important !
+Plus un logiciel libre a du succès, plus des utilisateurs avancés vont (statistiquement) l'étudier.
+Si ce logiciel contient des mécanismes nocifs pour l'utilisateur (DRM, récolte et envoi de données personnelles, etc.) ou des failles de sécurité pouvant nuire à l'utilisateur, alors un signal d'alarme est tiré, et le logiciel incriminé va devoir revoir sa copie ou sera soigneusement évité par la communauté.
+
+Ceci assure que presque l'intégralité des logiciels libre prennent soin de la sécurité et de la vie privée de l'utilisateur.
+Les utilisateurs de logiciels propriétaires doivent quant à eux faire confiance aux auteurs du logiciel pour toutes ses questions.
+Quand il s'agit de logiciels édités par des entreprises, dont le but est par définition de faire du profit, on peut se demander si c'est bien placer sa confiance\dots{}
+
+La différence entre le libre et l'open source est principalement une différence de philosophie.
+Le logiciel libre met en avant la liberté qu'il apporte à ses utilisateurs, tandis que le logiciel open source va apprécier la communauté de développeurs qui va se former autour de lui et lui permettre de se développer plus efficacement.
+En pratique, presque tous les logiciels libres correspondent à la définition d'un logiciel open source et inversement.
+
+Pour ne pas avoir à réécrire à chaque fois un nouveau contrat de licence pour leurs nouvelles créations, les développeurs de logiciels libres ont tendance à récupérer des textes de licences existantes (qui la plupart du temps sont libres eux aussi).
+Certains licences sont donc très répandues parmi les logiciels libres.
+On peut citer, par exemple, la GNU General Public License\footnote{Écrite par Richard Stallman lui-même, pour son projet GNU} (GNU GPL) ou la licence MIT\footnote{Du nom de l'université qui l'a créée (Massachusetts Institute of Technology)}.
+
+La licence MIT donne à toute personne recevant le logiciel le droit illimité de l'utiliser, le copier, le modifier, le fusionner, le publier, le distribuer, le vendre et de changer sa licence, à la seule condition que les noms des auteurs soient cités, même en cas de modification du logiciel.
+La licence GNU GPL offre des droits similaires, à la différence qu'elle met en œuvre la notion de copyleft\footnote{Il s'agit d'un jeu de mot basé sur le mot <<~copyright~>> ; l'idée de copyleft est opposée à celle de copyright}, ce qui veut dire que le logiciel doit être redistribué avec la même licence, même s'il a été modifié.
+
+\begin{quotation}
+\textit{<<~L'idée centrale du copyleft est de donner à quiconque la permission d'exécuter le programme, de le copier, de le modifier, et d'en distribuer des versions modifiées - mais pas la permission d'ajouter des restrictions de son cru. C'est ainsi que les libertés cruciales qui définissent le logiciel libre sont garanties pour quiconque en possède une copie ; elles deviennent des droits inaliénables.~>>}
+\begin{flushright}Richard Stallman\end{flushright}
+\end{quotation}
+
+Les logiciels libres permettent donc de ne pas devenir esclaves du progrès, car ils donnent le pouvoir aux utilisateurs, et non pas aux leurs créateurs comme c'est le cas pour les logiciels propriétaires.
+Les logiciels sont déjà partout, pas seulement dans nos ordinateurs, et il nous revient de choisir si nous voulons garder le contrôle sur notre technologie, ou le confier à des sociétés dont le but est de faire du profit.
+
+Il est facile de faire ressentir ce besoin du logiciel libre contre l'esclavage grâce au domaine médical\footnote{Un autre exemple que celui que je vais développer ici est disponible à cette adresse : \url{http://www.framablog.org/index.php/post/2012/11/26/un-coeur-gros-comme-ca}}.
+Il existe actuellement un bon nombre d'appareils médicaux dont le fonctionnement est régit par des logiciels (par exemple, les stimulateurs cardiaques, ou <<~pacemakers~>>).
+On peut dire que ces appareils ne valent que ce que valent leurs logiciels.
+Si ces logiciels sont propriétaires, il est très difficile de se dire qu'on a dans le corps des appareils dont le comportement n'est connu que par la société qui les a fabriqués.
+
+S'ils étaient libres, ils pourraient à coup sûr bénéficier de nombreuses relectures par des experts d'horizons différents, ce qui réduirait le nombre de bogues\footnote{Francisation de l'anglais <<~bug~>> qui désigne un défaut de conception d'un programme informatique à l'origine d'un dysfonctionnement}.
+Car oui, les logiciels ont des bogues.
+Et lorsque ces logiciels nous maintiennent en vie, un bogue peut être fatal.
+Et avec un code fermé, qu'est ce qui empêche l'appareil d'envoyer nos signaux vitaux en sans-fil à notre insu ?
+Ou, s'il est nécessaire que ses informations soient envoyés en sans-fil à un autre appareil, la connexion sans-fil est-elle sécurisée ?
+Si ce n'est pas le cas, peut être que quelqu'un peu communiquer avec notre pacemaker et lui donner l'ordre de s'arrêter\dots{}
+
+Le logiciel libre est un bouclier contre ce genre de pratiques et de négligences, et, en ce sens, il est indispensable.
+
+Je vais terminer cette partie sur un dernier point : celui du patrimoine.
+J'ai dit, lorsque j'ai expliqué le droit d'auteur (page \pageref{droit-auteur}), que lorsqu'on crée une œuvre de l'esprit, on se voit alors automatiquement doté de droits exclusifs relatifs à l'exploitation de cette œuvre.
+Contrairement au système des brevets, qui n'offre pas de droits automatiques, le système du droit d'auteurs (et du copyright) ne possède pas de base de données indiquant pour chaque œuvre son auteur, ainsi que les droits d'exploitation que celui-ci a cédé (ou pas) et à qui.
+
+Il se pose alors le problème d'œuvres orphelines, c'est à dire n'ayant pas d'auteur connu.
+On ne peut actuellement pas considérer que ces œuvres font partie du domaine public, et pour cette raison, leur utilisation est un risque.
+
+Par exemple, on peut imaginer que, voulant utiliser une œuvre dans un de mes projets, je décide de contacter son auteur pour négocier la permission de reprendre son travail dans le mien.
+Ne parvenant pas à trouver cet auteur, je décide tout de même d'utiliser l'œuvre.
+Quelques années plus tard, l'auteur en question réapparait, prouve qu'il est bien l'auteur de l'œuvre que j'ai utilisée, et me fait un procès pour violation du droit d'auteur.
+Je perds, et je dois lui payer une énorme amende.
+
+Conclusion : une œuvre orpheline est <<~bloquée~>> entre la zone de droit et le domaine public, et l'utiliser comporte un risque énorme.
+
+Je parle de ça ici car, pour moi, si nous ne voulons pas que les générations futures deviennent esclaves de la technologie et des idées contrôlées par une minorité, nous devons lui donner les moyens de les apprivoiser.
+Et cela passe par la possibilité de ce servir des œuvres et des idées que nous allons leur léguer.
+Malheureusement, le système actuel ne semble pas aller dans ce sens ; il ne tient qu'à nous le faire évoluer, mais j'y reviendrais plus tard\dots{}
 
 %(logiciel libre, donner le pouvoir aux utilisateurs, assurer le patrimoine, exemple du domaine médical)
 \section{Partager pour mieux créer}
-(partager le plus possible, aller contre l'aversion à la perte, hacker, exemple du téléphone, exemples de réussites du libre, exemple de Arduino, exemple de la mode)
+
+
+
+%(partager le plus possible, aller contre l'aversion à la perte, hacker, exemple du téléphone, exemples de réussites du libre, exemple de Arduino, exemple de la mode)
 \section{Valoriser les créateurs}
 (les pirates achètent, inutilité licence globale, inventer des modèles économiques, exemple des vendeurs de glace)
 \section{La réforme du système actuel}
