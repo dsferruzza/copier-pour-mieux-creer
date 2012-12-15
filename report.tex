@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[paper=a4paper,hmargin=2cm,vmargin=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{palatino, euler} 
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
@@ -45,9 +45,27 @@
 	\renewcommand{\headrulewidth}{0pt}
 }
 
+% Changement de marges
+\newenvironment{changemargin}[2]{%
+	\begin{list}{}{%
+		\setlength{\topsep}{0pt}%
+		\setlength{\leftmargin}{#1}%
+		\setlength{\rightmargin}{#2}%
+		\setlength{\listparindent}{\parindent}%
+		\setlength{\itemindent}{\parindent}%
+		\setlength{\parsep}{\parskip}%
+	}%
+	\item[]}{\end{list}}
+
 \begin{document}
 
-\maketitle
+%\maketitle
+
+\begin{titlepage}
+\begin{changemargin}{-1cm}{-1cm} 
+\includegraphics[scale=.204]{images/cover.png}
+\end{changemargin}
+\end{titlepage}
 
 \include{licence}
 
