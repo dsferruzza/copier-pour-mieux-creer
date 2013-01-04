@@ -71,16 +71,20 @@
 
 %\maketitle
 
-\begin{titlepage}
-\begin{changemargin}{-1cm}{-1cm} 
-\includegraphics[width=1.05\textwidth]{images/cover.png}
-\end{changemargin}
-\end{titlepage}
+%\begin{titlepage}
+%\begin{changemargin}{-1cm}{-1cm} 
+%\includegraphics[width=1.05\textwidth]{images/cover.png}
+%\end{changemargin}
+%\end{titlepage}
 
 \thispagestyle{empty}
 \include{licence}
 
-\setcounter{page}{3} % on synchronise les n° de page du doc et du pdf
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+%\setcounter{page}{3} % on synchronise les n° de page du doc et du pdf
 \tableofcontents
 
 \include{intro}
