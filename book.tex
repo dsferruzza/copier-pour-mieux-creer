@@ -1,0 +1,98 @@
+\documentclass[10pt,a5paper,twoside,openright]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[paper=a5paper,hmargin=1.4cm,vmargin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{palatino, euler} 
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{float}
+\usepackage{ulem}
+
+\urlstyle{sf} % style des url
+\setlength{\parskip}{2ex plus .4ex minus .4ex} % espacement vertical entre les paragraphes
+%\setlength{\headheight}{15.6pt}
+\uchyph=0 % empêcher la coupure des mots commençant par une majuscule
+\setlength{\fboxsep}{3mm}
+\renewcommand{\tabcolsep}{0.5cm} % padding dans les tableaux
+\renewcommand{\arraystretch}{1.5} % padding dans les tableaux
+
+% Encadré
+\newcommand\encadre[1]{\vspace{1.5ex}\fbox{\begin{minipage}{0.92\textwidth}\begin{center}#1\end{center}\end{minipage}}\vspace{2.5ex}}
+
+\newcommand{\titre}{Copier pour mieux créer} % Copier pour mieux coller / Copier, c'est le progrès / Copier pour mieux créer
+\newcommand{\moi}{David Sferruzza}
+\author{\moi}
+\title{\textit{\titre}}
+\date{décembre 2012}
+
+% Entête et pied de page
+\fancyhf{}
+\lhead{{\scriptsize \leftmark}}
+\lfoot{{\small \moi{}~~~--~~~\textit{\titre}}}
+\rfoot{\thepage/\pageref*{LastPage}}
+\renewcommand{\footrulewidth}{0.1pt}
+\pagestyle{fancy}
+
+% Entête et pied de page pour les 1ères pages des chapitres
+\fancypagestyle{plain}{
+	\lhead{}
+	\chead{}
+	\rhead{}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+% Changement de marges
+\newenvironment{changemargin}[2]{
+	\begin{list}{}{
+		\setlength{\topsep}{0pt}
+		\setlength{\leftmargin}{#1}
+		\setlength{\rightmargin}{#2}
+		\setlength{\listparindent}{\parindent}
+		\setlength{\itemindent}{\parindent}
+		\setlength{\parsep}{\parskip}
+	}
+	\item[]}{\end{list}}
+
+% Métadonnées
+\hypersetup{
+	pdfauthor = {\moi{} (david.sferruzza@gmail.com)},
+	pdftitle = {\titre},
+%	pdfsubject = {Sujet},
+%	pdfkeywords = {Mots-clefs},
+	pdfcreator = {LaTeX},
+	pdfproducer = {LaTeX}
+}
+
+\begin{document}
+
+%\maketitle
+
+\begin{titlepage}
+\begin{changemargin}{-1cm}{-1cm} 
+\includegraphics[width=1.05\textwidth]{images/cover.png}
+\end{changemargin}
+\end{titlepage}
+
+\thispagestyle{empty}
+\include{licence}
+
+\setcounter{page}{3} % on synchronise les n° de page du doc et du pdf
+\tableofcontents
+
+\include{intro}
+\include{chap1}
+\include{chap2}
+\include{chap3}
+\include{conclusion}
+
+\appendix
+
+\include{annexes}
+
+\listoffigures
+
+\end{document}
