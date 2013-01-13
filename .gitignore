@@ -1,8 +1,7 @@
-# Ignore all files generated for latex, except the .tex files themselves
+# Ignore all files generated for latex, except the .tex files themselves and .pdf files
 *.aux
 *.log
 *.out
-*.pdf
 *.gz
 *.toc
 *.bak
