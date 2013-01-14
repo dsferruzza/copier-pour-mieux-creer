@@ -4,6 +4,14 @@ Mémoire traitant de la copie dans la création.
 
 Écrit en décembre 2012.
 
+## Lire
+
+* Format rapport (PDF, A4) : https://github.com/dsferruzza/copier-pour-mieux-creer/blob/master/report.pdf?raw=true
+* Format livre (PDF, A5) : https://github.com/dsferruzza/copier-pour-mieux-creer/blob/master/book.pdf?raw=true
+* Version papier format livre de poche : http://www.lulu.com/content/livre-%c3%a0-couverture-souple/copier-pour-mieux-cr%c3%a9er/13548060
+
+*La version papier est vendue par [Lulu.com](http://www.lulu.com) à prix coûtant ; je ne fais pas de bénéfice dessus.*
+
 ## Contexte
 
 J'ai écrit ce mémoire de sciences humaines pour l'Icam de Nantes.
